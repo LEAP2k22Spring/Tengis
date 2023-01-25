@@ -63,13 +63,20 @@ function App(): JSX.Element {
   };
 
   return (
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{backgroundColor:"red"}}>
+    <View>
+        <View style={styles.yellow}></View>
+
+        <View style={styles.centerContainer}>
+          <View style={styles.blue}></View>
+          <View style={styles.centerContainerTwo}>
+            <View style={styles.silver}></View>
+            <View style={styles.green}></View>
+            <View style={styles.white}></View>
+          </View>
+
         </View>
-      </ScrollView>
+        <View style={styles.red}></View>
+    </View>
   );
 }
 
@@ -90,6 +97,37 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  yellow: {
+    backgroundColor:"yellow",
+    height:100,
+  },
+  centerContainer: {
+    flexDirection:'row',
+    height:650
+  },
+  blue: {
+    backgroundColor:"blue",
+    flex:1
+  },
+  centerContainerTwo: {
+    height:"100%",
+    width:"70%"
+  },
+  silver: {
+    backgroundColor:"silver",
+    flex:1
+  },
+  green: {
+    backgroundColor:"green",
+    flex:3
+  },
+  white: {
+   flex:1.2
+  },
+  red: {
+    backgroundColor:"red",
+    height:100
+  }
 });
 
 export default App;
