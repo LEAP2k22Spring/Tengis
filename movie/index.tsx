@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     SafeAreaView,
     ScrollView,
     StyleSheet,
     Text,
     View,
+    Switch,
+    TextInput,
   } from 'react-native';
 import Cart from "./components/MovieDetailCart";
+import movieData from "./data/movieDetail.json";
 
-  function Movie(): JSX.Element {
+// import Icon from 'react-native-vector-icons';
+function Movie(): JSX.Element {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   
     return (
-        
     <ScrollView style={styles.body}>
         <SafeAreaView>
             <Text style={styles.textStyle}>Movies</Text>
             <View style={styles.container}>
-                <Cart/>
-                <Cart/>
-                <Cart/>
-                {/* <Cart/>
-                <Cart/>
-                <Cart/> */}
+              {movieData.map((el, index) => <Cart index={index}/>)}
             </View>
+            {/* <Icon name="rocket" size={30} color="#900"/> */}
         </SafeAreaView>
+        <Switch
+              trackColor={{false: '#767577', true: 'white'}}
+              thumbColor={isEnabled ? '#f5dd4b' : 'red'}
+              ios_backgroundColor="#3e3e3e"
+              onValueChange={toggleSwitch}
+              value={isEnabled}
+            />
+            <TextInput keyboardType={'phone-pad'} />
     </ScrollView>
     );
   }
