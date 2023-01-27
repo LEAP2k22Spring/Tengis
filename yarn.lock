@@ -5800,6 +5800,13 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-animate@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.npmjs.org/react-native-animate/-/react-native-animate-1.5.0.tgz"
+  integrity sha512-E4R50QdTaP6Qj99lnd88cvb/gEVblDjVOrtBYHbGBI1Bx54xjndEeCVFAUyRC+7o5/pNI7Xm63QBqP+kXPurBA==
+  dependencies:
+    react-native "*"
+
 react-native-codegen@^0.71.3:
   version "0.71.3"
   resolved "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.71.3.tgz"
@@ -5823,7 +5830,7 @@ react-native-vector-icons@^9.2.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native@0.71.1:
+react-native@*, react-native@0.71.1:
   version "0.71.1"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.71.1.tgz"
   integrity sha512-bLP5+IBj2IX6tgF9WnC/UL2ZPYkVUPsU4xqZV1jntTC2TH4xyLrvfKACjGlz5nQ3Mx4BmOFqsnMxithm53+6Aw==

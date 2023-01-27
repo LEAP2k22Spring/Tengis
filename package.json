@@ -13,6 +13,7 @@
     "axios": "^1.2.4",
     "react": "18.2.0",
     "react-native": "0.71.1",
+    "react-native-animate": "^1.5.0",
     "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {

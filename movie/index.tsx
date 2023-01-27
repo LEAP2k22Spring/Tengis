@@ -32,7 +32,7 @@ function Movie(): JSX.Element {
               onValueChange={toggleSwitch}
               value={isEnabled}
             />
-            <TextInput keyboardType={'phone-pad'} />
+            <TextInput keyboardType={'phone-pad '} />
     </ScrollView>
     );
   }
