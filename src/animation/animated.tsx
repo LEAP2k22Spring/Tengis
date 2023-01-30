@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
         width: 120,
         backgroundColor: 'yellow',
         borderRadius: 100
-    }
+    },
 })
 export default Animation;

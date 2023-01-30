@@ -14,7 +14,7 @@ import movieData from "./data/movieDetail.json";
 // import Icon from 'react-native-vector-icons';
 function Movie(): JSX.Element {
   const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);;
   
     return (
     <ScrollView style={styles.body}>
@@ -25,14 +25,14 @@ function Movie(): JSX.Element {
             </View>
             {/* <Icon name="rocket" size={30} color="#900"/> */}
         </SafeAreaView>
-        <Switch
+        {/* <Switch
               trackColor={{false: '#767577', true: 'white'}}
               thumbColor={isEnabled ? '#f5dd4b' : 'red'}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch}
               value={isEnabled}
-            />
-            <TextInput keyboardType={'phone-pad '} />
+            /> */}
+            {/* <TextInput keyboardType={'phone-pad '} /> */}
     </ScrollView>
     );
   }

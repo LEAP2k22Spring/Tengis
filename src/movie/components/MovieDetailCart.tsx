@@ -6,14 +6,15 @@ import {
     Image,
   } from 'react-native';
 import data from "../data/movieDetail.json"
-  function Cart(): JSX.Element {
+  function Cart({index}): JSX.Element {
   
     return (
         <View style={styles.body}>
-          <Image style={styles.imageStyle} source={{uri:data[1].Poster}}/>
-          <View>
-            <Text style={styles.textStyle}>{data[1].Title}</Text>
-            <Text style={styles.textStyle}>{data[1].Year}</Text>
+          <Image style={styles.imageStyle} source={{uri:data[index].Poster}}/>
+          <View style={styles.mid}>
+            <Text style={styles.textStyle}>{data[index].Title}</Text>
+            <Text style={styles.textStyle}>{data[index].Year}</Text>
+            <Text style={styles.textStyle}>{data[index].imdbID}</Text>
           </View> 
         </View>
     );
@@ -36,6 +37,12 @@ import data from "../data/movieDetail.json"
     textStyle:{
       color:"white",
       fontSize:20
+    },
+    mid:{
+      display:"flex",
+      alignItems:"center",
+      width:"70%",
+      justifyContent:"space-around"
     }
   })
 
